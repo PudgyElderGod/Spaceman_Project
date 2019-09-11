@@ -47,6 +47,26 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
 
     #TODO: Loop through the letters in secret word and build a string that shows the letters that have been guessed correctly so far that are saved in letters_guessed and underscores for the letters that have not been guessed yet
+    for i in secret_word:
+        secret_list.append(i)
+
+    secret_word_len = secret_word
+
+    for i in secret_word_len:
+        if len(user_list) < len(secret_word):
+            user_list.append("_")
+        else : pass
+
+    if letters_guessed in user_list:
+        print(user_list)
+        return print(f'You already guessed that letter!')
+
+    if letters_guessed in secret_word:
+        print(letters_guessed)
+        secret_index = secret_list.index(letters_guessed)
+        user_list.insert(secret_index, letters_guessed)
+        print(user_list)
+    else: print(user_list)
 
     pass
 
