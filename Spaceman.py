@@ -73,7 +73,7 @@ def is_guess_in_word(guess, secret_word):
         print("You guessed correctly!")
         return True
     else:
-        print('{guess} was wrong!')
+        print(f'{guess} was wrong!')
         return False
     pass
 
@@ -90,7 +90,7 @@ def spaceman(secret_word):
     running = True
     while running:
         print(f'You have {health} guesses left!')
-        print(secret_word)
+        print(f'You have guessed {letters_guessed} so far!')
         print(get_guessed_word(secret_word, letters_guessed))
         guess = input("Guess a letter!")
         letters_guessed.append(guess)
