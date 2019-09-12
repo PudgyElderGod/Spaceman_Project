@@ -98,6 +98,7 @@ def spaceman(secret_word):
             health -= 1
             if health == 0:
                 print(f'Your Spacemans has perished! The word was {secret_word}')
+                running = False
                 break
 
     #TODO: show the player information about the game according to the project spec
@@ -112,7 +113,9 @@ def spaceman(secret_word):
     #TODO: show the guessed word so far
 
     #TODO: check if the game has been won or lost
-
+        if is_word_guessed(secret_word, letters_guessed):
+            print("!!! Your Spacemans Survived!!!")
+            running = False
 
 
 
